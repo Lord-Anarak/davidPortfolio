@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Silka;
+  src: url("./fonts/silka-regular-webfont.woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Silka", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#earth {
+  width: 50px;
+  height: 50px;
+  background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 110px;
+  box-shadow: inset 2px 9px 20px 6px rgb(52, 52, 52),
+    inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+  animation-name: rotate;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 18s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+.burgerButton {
+  @apply fixed top-0 right-0 m-10 w-16 h-16 rounded-full flex items-center justify-center;
+}
+.burgerButton .burger {
+  @apply w-full;
+}
+.burgerButton .burger::after,
+.burgerButton .burger::before {
+  content: "";
+  @apply block w-6 bg-white h-[1px] m-auto relative duration-300 ease-out;
+}
+.burgerButton .burger::after {
+  top: -4px;
+}
+.burgerButton .burger::before {
+  top: 4px;
+}
+.burgerButton .burgerActive::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burgerButton .burgerActive::before {
+  top: 1px;
+  transform: rotate(-45deg);
+}
+.btn-sidebar ::before {
+  content: "";
+  @apply w-2 h-2 bg-white absolute left-0 rounded-full mt-5 ml-7 scale-0 duration-300;
+}
+.btn-sidebar:hover ::before {
+  @apply scale-100;
+}
