@@ -44,7 +44,7 @@ const Modal = ({ modal, works }) => {
               <div
                 className={`relative h-full flex items-center justify-center ${color} p-3 `}
                 key={index}>
-                <video src={src} autoPlay loop muted />
+                <video src={src} autoPlay={true} loop={true} muted />
               </div>
             );
           })}
