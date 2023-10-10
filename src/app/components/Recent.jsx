@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-import Image from "next/image";
 
 const Works = [
   {
@@ -29,8 +28,7 @@ const Recent = () => {
             key={index}
             className="text-6xl text-gray-600 border-b w-full flex justify-between items-center py-10 px-5 group"
             onMouseEnter={() => setModal({ active: true, index: index })}
-            onMouseLeave={() => setModal({ active: false, index: index })}
-          >
+            onMouseLeave={() => setModal({ active: false, index: index })}>
             <span className="group-hover:-translate-x-4 group-hover:text-black duration-200 ease-linear">
               {title}
             </span>
