@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import Magnetic from "./common/Magnetic";
 import RoundedButton from "./common/RoundedButton";
 
@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="pt-[250px] w-full">
         <div className="border-b-gray-500 border-b-2 pb-[100px] mx-[200px]">
           <span className="flex items-center">
-            <h2 className="ml-2 text-[2vw]">Let's work</h2>
+            <h2 className="ml-2 text-[2vw]">Let&apos;s work</h2>
           </span>
           <h2 className="m-0 text-[5vw]">together</h2>
           <motion.div

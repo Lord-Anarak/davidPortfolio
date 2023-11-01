@@ -30,7 +30,7 @@ const ContactPage = () => {
         ref={container}>
         <div className="w-[73%]">
           <h1 className="text-[5vw] text-white ">
-            Let's Start a Project together
+            Let&apos;s Start a Project together
           </h1>
           <form action="" ref={formRef} className="mt-10 p-10 relative">
             <label className="flex flex-col py-12 gap-6 text-slate-300 border-t border-slate-500">
