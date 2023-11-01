@@ -1,9 +1,26 @@
-import React from 'react'
+"use client";
+import React, { useRef } from "react";
+import Gallery from "../components/Gallery";
+import Overlay from "../components/common/Overlay";
+import Footer from "../components/Footer";
 
 const WorkPage = () => {
-  return (
-    <div>WorkPage</div>
-  )
-}
+  const container = useRef(null);
 
-export default WorkPage
+  return (
+    <div className="bg-white">
+      <div className="flex h-[80vh] justify-center items-center mb-10">
+        <h1 className="text-[5vw] px-[20vw] leading-tight">
+          Creating Product designs that you never seen before
+        </h1>
+      </div>
+      <div ref={container} className="relative z-20 bg-white">
+        <Gallery />
+      </div>
+      <Overlay />
+      <Footer />
+    </div>
+  );
+};
+
+export default WorkPage;
