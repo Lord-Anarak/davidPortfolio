@@ -20,11 +20,11 @@ const AboutPage = () => {
               prioritizing quality above all else.
             </p>
           </div>
-          <div className="w-2/4 h-[80vh]">
+          <div className="w-2/4 h-[80vh] overflow-hidden">
             <img
               src="assets/davidprof.jpg"
-              alt=""
-              className="w-full h-full object-cover"
+              alt="Profile_pic"
+              className="w-full h-auto -mt-10"
             />
           </div>
         </div>
