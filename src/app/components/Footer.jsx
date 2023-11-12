@@ -1,11 +1,33 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Magnetic from "./common/Magnetic";
 import RoundedButton from "./common/RoundedButton";
 
+const getDubaiTime = () => {
+  const dubaiTime = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Asia/Dubai",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  return dubaiTime;
+};
+
 const Footer = () => {
   const container = useRef(null);
+  const [time, setTime] = useState(getDubaiTime())
+
+  useEffect(() => {
+    // Update time every second
+    const intervalId = setInterval(() => {
+      setTime(getDubaiTime());
+    }, 1000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []); 
+
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end end"],
@@ -13,6 +35,9 @@ const Footer = () => {
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-400, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+
+
+
   return (
     <motion.div
       style={{ y }}
@@ -49,25 +74,25 @@ const Footer = () => {
         </div>
         <div className="flex gap-5 mx-[200px] mt-16">
           <RoundedButton>
-            <p className="relative z-10">360motionstud@gmail.com</p>
+            <p className="relative z-10">360motionstudio@gmail.com</p>
           </RoundedButton>
           <RoundedButton>
-            <p className="relative z-10">+31 6 27 84 74 30</p>
+            <p className="relative z-10">+971 54 588 9937</p>
           </RoundedButton>
         </div>
         <div className="flex justify-between p-5 mt-24">
           <div className="flex gap-10 items-end">
             <span className="flex flex-col gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
-                Version
+                Copyright
               </h3>
-              <p className="m-0 p-2 cursor-pointer">2022 © Edition</p>
+              <p className="m-0 p-2 cursor-pointer">2023 © Edition</p>
             </span>
             <span className="flex flex-col gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
                 Local Time
               </h3>
-              <p className="m-0 p-2 cursor-pointer">11:49 PM GMT+2</p>
+              <p className="m-0 p-2 cursor-pointer">{time} GMT+4</p>
             </span>
           </div>
           <div className="flex gap-10 items-end">

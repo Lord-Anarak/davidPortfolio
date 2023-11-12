@@ -30,6 +30,7 @@ const Works = [
   },
 ];
 
+
 const Recent = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   const container = useRef(null);
@@ -44,8 +45,8 @@ const Recent = () => {
             <li
               key={index}
               className="text-6xl text-black border-b w-full flex justify-between items-center py-10 px-5 group"
-              onMouseEnter={() => setModal({ active: true, index: index })}
-              onMouseLeave={() => setModal({ active: false, index: index })}>
+              onMouseEnter={() => setModal(prevState => ({ active: true, index: index }))}
+              onMouseLeave={() => setModal(prevState => ({ active: false, index: index }))}>
               <span className="group-hover:-translate-x-4 group-hover:text-gray-600 duration-200 ease-linear">
                 {title}
               </span>
@@ -64,3 +65,4 @@ const Recent = () => {
 };
 
 export default Recent;
+

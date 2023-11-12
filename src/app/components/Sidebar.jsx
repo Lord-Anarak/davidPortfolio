@@ -34,7 +34,7 @@ export const Curve = () => {
 	);
 };
 
-const Sidebar = () => {
+const Sidebar = ({closeSidebar}) => {
 	const SideLinks = ["Home", "About", "Work", "Contact"];
 	return (
 		<motion.div
@@ -59,8 +59,8 @@ const Sidebar = () => {
 							animate="enter"
 							exit="exit"
 							className="text-white text-5xl py-2 btn-sidebar"
-							key={index}>
-							<Link href={lcText === "Home" ? "/" : `/${lcText}`}>
+							key={index} onClick={closeSidebar}>
+							<Link href={lcText === "home" ? "/" : `/${lcText}`}>
 								{sideLink}
 							</Link>
 						</motion.li>

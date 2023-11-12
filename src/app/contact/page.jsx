@@ -1,13 +1,34 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import Magnetic from "../components/common/Magnetic";
 import RoundedButton from "../components/common/RoundedButton";
 
+const getDubaiTime = () => {
+  const dubaiTime = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Asia/Dubai",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  return dubaiTime;
+};
+
 const ContactPage = () => {
   const formRef = useRef();
   const container = useRef(null);
+
+  const [time, setTime] = useState(getDubaiTime())
+
+  useEffect(() => {
+    // Update time every second
+    const intervalId = setInterval(() => {
+      setTime(getDubaiTime());
+    }, 1000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []); 
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -51,7 +72,7 @@ const ContactPage = () => {
             <label className="flex flex-col py-12 gap-6 text-slate-300 border-t border-slate-500">
               <span className="flex items-center">
                 02
-                <span className="ml-10 text-3xl">What is your name?</span>
+                <span className="ml-10 text-3xl">What is your email?</span>
               </span>
               <input
                 type="email"
@@ -66,7 +87,7 @@ const ContactPage = () => {
             <label className="flex flex-col py-12 gap-6 text-slate-300 border-t border-slate-500">
               <span className="flex items-center">
                 03
-                <span className="ml-10 text-3xl">What is your name?</span>
+                <span className="ml-10 text-3xl">Your message?</span>
               </span>
               <textarea
                 rows="7"
@@ -110,15 +131,15 @@ const ContactPage = () => {
         <div className="flex gap-10 items-end">
           <span className="flex flex-col gap-5 ">
             <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
-              Version
+              Copyright
             </h3>
-            <p className="m-0 p-2 cursor-pointer">2022 © Edition</p>
+            <p className="m-0 p-2 cursor-pointer">2023 © Edition</p>
           </span>
           <span className="flex flex-col gap-5 ">
             <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
               Local Time
             </h3>
-            <p className="m-0 p-2 cursor-pointer">11:49 PM GMT+2</p>
+            <p className="m-0 p-2 cursor-pointer">{time} GMT+4</p>
           </span>
         </div>
         <div className="flex gap-10 items-end">

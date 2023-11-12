@@ -4,6 +4,7 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import { AnimatePresence, motion } from "framer-motion";
 import RoundedButton from "./common/RoundedButton";
+import Magnetic from "./common/Magnetic";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
       <div className="flex justify-between p-10">
         <div>
           <Link href="/" className={path === "/contact" ? "text-white" : ""}>
-            Portfolio
+            360MotionStudio
           </Link>
         </div>
         <nav>
@@ -37,13 +38,15 @@ const Header = () => {
             {navLinks.map((link, index) => {
               const lcText = link.toLowerCase();
               return (
-                <li key={index}>
-                  <Link
-                    href={`/${lcText}`}
-                    className={path === "/contact" ? "text-white" : ""}>
-                    {link}
-                  </Link>
-                </li>
+                <Magnetic>
+                  <li key={index} className={`p-2  ${path === "/contact" ? "btn-navbar-c" : "btn-navbar"} ${Active === index ? "navbar-active" : ""}`}>
+                    <Link
+                      href={`/${lcText}`}
+                      className={path === "/contact" ? "text-white" : ""} onClick={() => setActive(index)}>
+                      {link}
+                    </Link>
+                  </li>
+                </Magnetic>
               );
             })}
           </ul>
@@ -66,7 +69,7 @@ const Header = () => {
           <div className={`burger ${IsOpen ? "burgerActive" : ""} z-30`}></div>
         </RoundedButton>
       </motion.button>
-      <AnimatePresence mode="wait">{IsOpen && <Sidebar />}</AnimatePresence>
+      <AnimatePresence mode="wait">{IsOpen && <Sidebar closeSidebar= {()=> setIsOpen(false)}/>}</AnimatePresence>
     </header>
   );
 };
