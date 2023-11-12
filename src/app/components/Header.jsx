@@ -39,10 +39,15 @@ const Header = () => {
               const lcText = link.toLowerCase();
               return (
                 <Magnetic key={index}>
-                  <li key={index} className={`p-2  ${path === "/contact" ? "btn-navbar-c" : "btn-navbar"} ${Active === index ? "navbar-active" : ""}`}>
+                  <li
+                    key={index}
+                    className={`p-2 ${
+                      path === `/${lcText}` ? "btn-navbar-c" : "btn-navbar"
+                    } ${Active === index ? "navbar-active" : ""}`}>
                     <Link
                       href={`/${lcText}`}
-                      className={path === "/contact" ? "text-white" : ""} onClick={() => setActive(index)}>
+                      className={path === "/contact" ? "text-white" : ""}
+                      onClick={() => setActive(index)}>
                       {link}
                     </Link>
                   </li>
@@ -69,7 +74,9 @@ const Header = () => {
           <div className={`burger ${IsOpen ? "burgerActive" : ""} z-30`}></div>
         </RoundedButton>
       </motion.button>
-      <AnimatePresence mode="wait">{IsOpen && <Sidebar closeSidebar= {()=> setIsOpen(false)}/>}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {IsOpen && <Sidebar closeSidebar={() => setIsOpen(false)} />}
+      </AnimatePresence>
     </header>
   );
 };
