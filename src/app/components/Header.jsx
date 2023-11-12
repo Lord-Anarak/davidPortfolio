@@ -38,8 +38,8 @@ const Header = () => {
             {navLinks.map((link, index) => {
               const lcText = link.toLowerCase();
               return (
-                <Magnetic>
-                  <li key={index} className={`p-2  ${path === "/contact" ? "btn-navbar-c" : "btn-navbar"} ${Active === index ? "navbar-active" : ""}`}>
+                <Magnetic key={index}>
+                  <li  className={`p-2  ${path === "/contact" ? "btn-navbar-c" : "btn-navbar"} ${Active === index ? "navbar-active" : ""}`}>
                     <Link
                       href={`/${lcText}`}
                       className={path === "/contact" ? "text-white" : ""} onClick={() => setActive(index)}>
