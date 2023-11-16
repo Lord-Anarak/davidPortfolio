@@ -41,7 +41,7 @@ const Header = () => {
                 <li key={ind}
                   className={`p-2 ${
                     path === `/${lcText}` ? "btn-navbar-c" : "btn-navbar"
-                  } ${Active === index ? "navbar-active" : ""}`}>
+                  } ${Active === ind ? "navbar-active" : ""}`}>
                   <Link
                     href={`/${lcText}`}
                     className={path === "/contact" ? "text-white" : ""}
