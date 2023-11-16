@@ -43,14 +43,12 @@ const Header = () => {
                   className={`p-2 ${
                     path === `/${lcText}` ? "btn-navbar-c" : "btn-navbar"
                   } ${Active === index ? "navbar-active" : ""}`}>
-                  <Magnetic>
-                    <Link
-                      href={`/${lcText}`}
-                      className={path === "/contact" ? "text-white" : ""}
-                      onClick={() => setActive(index)}>
-                      {link}
-                    </Link>
-                  </Magnetic>
+                  <Link
+                    href={`/${lcText}`}
+                    className={path === "/contact" ? "text-white" : ""}
+                    onClick={() => setActive(index)}>
+                    {link}
+                  </Link>
                 </li>
               );
             })}
