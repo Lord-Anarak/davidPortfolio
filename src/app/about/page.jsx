@@ -2,18 +2,18 @@
 import React, { useEffect, useRef } from "react";
 import Overlay from "../components/common/Overlay";
 import Footer from "../components/Footer";
-import locomotiveScroll from "locomotive-scroll";
 
 const AboutPage = () => {
   const scrollContainer = useRef(null);
 
   useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollContainer.current,
-      smooth: true,
-    });
-
-    return () => {};
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const scroll = new LocomotiveScroll({
+        el: scrollContainer.current,
+        smooth: true,
+      });
+    })();
   }, []);
 
   return (
@@ -51,7 +51,7 @@ const AboutPage = () => {
             data-scroll-section>
             <img
               data-scroll
-              data-scroll-speed="-0.5"
+              data-scroll-speed="-0.3"
               src="assets/davidprof.jpg"
               alt="Profile_pic"
               className="w-full h-auto -mt-60"
