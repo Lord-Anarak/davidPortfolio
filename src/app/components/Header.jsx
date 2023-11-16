@@ -44,8 +44,7 @@ const Header = () => {
                     }`}>
                     <Link
                       href={`/${lcText}`}
-                      className={path === "/contact" ? "text-white" : ""}
-                      onClick={() => setActive(index)}>
+                      className={path === "/contact" ? "text-white" : ""}>
                       {link}
                     </Link>
                   </li>
