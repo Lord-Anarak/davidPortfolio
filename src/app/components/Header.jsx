@@ -35,11 +35,10 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex justify-between gap-10">
-            {navLinks.map((link, index) => {
+            {navLinks.map((link, ind) => {
               const lcText = link.toLowerCase();
               return (
-                <li
-                  key={index}
+                <li key={ind}
                   className={`p-2 ${
                     path === `/${lcText}` ? "btn-navbar-c" : "btn-navbar"
                   } ${Active === index ? "navbar-active" : ""}`}>
