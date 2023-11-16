@@ -8,7 +8,6 @@ import Magnetic from "./common/Magnetic";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [Active, setActive] = useState(0);
   const [IsOpen, setIsOpen] = useState(false);
   const navLinks = ["About", "Work", "Contact"];
   const path = usePathname();
@@ -35,20 +34,22 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex justify-between gap-10">
-            {navLinks.map((link, ind) => {
+            {navLinks.map((link, index) => {
               const lcText = link.toLowerCase();
               return (
-                <li key={ind}
-                  className={`p-2 ${
-                    path === `/${lcText}` ? "btn-navbar-c" : "btn-navbar"
-                  } ${Active === ind ? "navbar-active" : ""}`}>
-                  <Link
-                    href={`/${lcText}`}
-                    className={path === "/contact" ? "text-white" : ""}
-                    onClick={() => setActive(ind)}>
-                    {link}
-                  </Link>
-                </li>
+                <Magnetic key={index}>
+                  <li
+                    className={`p-2 ${
+                      path === `/contact` ? "btn-navbar-c" : "btn-navbar"
+                    }`}>
+                    <Link
+                      href={`/${lcText}`}
+                      className={path === "/contact" ? "text-white" : ""}
+                      onClick={() => setActive(index)}>
+                      {link}
+                    </Link>
+                  </li>
+                </Magnetic>
               );
             })}
           </ul>

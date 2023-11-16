@@ -43,29 +43,29 @@ const Gallery = () => {
         <img src="assets/image00008.jpeg" className="img-responsive" />
         <img src="assets/image00009.jpeg" className="img-responsive" />
         <img src="assets/image00010.jpeg" className="img-responsive" />
-        <img src="assets/Bluetooth Speaker .jpg" className="img-responsive" />
+        <img src="assets/BluetoothSpeaker.jpg" className="img-responsive" />
 
         <img src="assets/Device0090.png" className="img-responsive" />
         <video className="vid" controls>
-          <source src="assets/osmetic Loop.mp4" type="video/mp4"></source>
+          <source src="assets/Cosmetic Loop.mp4" type="video/mp4"></source>
         </video>
-        <img src="assets/Energy Night .jpg" className="img-responsive" />
+        <img src="assets/EnergyNight.jpg" className="img-responsive" />
         <img src="assets/Grinder.jpg" className="img-responsive" />
-        <img src="assets/Kenwood Model.png" className="img-responsive" />
-        <img src="assets/Model 008.jpg" className="img-responsive" />
-        <img src="assets/Model 009.jpg" className="img-responsive" />
+        <img src="assets/KenwoodModel.png" className="img-responsive" />
+        <img src="assets/Model008.jpg" className="img-responsive" />
+        <img src="assets/Model009.jpg" className="img-responsive" />
         <video className="vid" controls>
           <source src="assets/Device IG_1.mp4" type="video/mp4"></source>
         </video>
-        <img src="assets/Model 010.jpg" className="img-responsive" />
-        <img src="assets/Model 011.jpg" className="img-responsive" />
-        <img src="assets/Nivea 1.png" className="img-responsive" />
+        <img src="assets/Model010.jpg" className="img-responsive" />
+        <img src="assets/Model011.jpg" className="img-responsive" />
+        <img src="assets/Nivea1.png" className="img-responsive" />
         <video className="vid" controls>
           <source src="assets/Motion 1.mp4" type="video/mp4"></source>
         </video>
-        <img src="assets/Nivea 2.png" className="img-responsive" />
-        <img src="assets/PT Adapt.jpg" className="img-responsive" />
-        <img src="assets/Watch Model .jpg" className="img-responsive" />
+        <img src="assets/Nivea2.png" className="img-responsive" />
+        <img src="assets/PTAdapt.jpg" className="img-responsive" />
+        <img src="assets/WatchModel.jpg" className="img-responsive" />
         <video className="vid" controls>
           <source
             src="assets/Flash Energy Booster 3D Reel.mp4"

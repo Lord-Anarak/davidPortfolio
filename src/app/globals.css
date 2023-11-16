@@ -75,29 +75,25 @@
   top: 1px;
   transform: rotate(-45deg);
 }
-.btn-sidebar ::before {
+.btn-sidebar ::after {
   content: "";
   @apply w-2 h-2 bg-white absolute left-0 rounded-full mt-5 ml-7 scale-0 duration-300;
 }
-.btn-sidebar:hover ::before {
+.btn-sidebar:hover ::after {
   @apply scale-100;
 }
-.btn-navbar ::before {
+.btn-navbar ::after {
   content: "";
   @apply w-1 h-1 bg-black absolute -bottom-3 left-[40%] rounded-full scale-0 duration-300;
 }
-.navbar-active ::after {
-  content: "";
-  @apply w-1 h-1 bg-black absolute -bottom-3 left-[40%] rounded-full;
-}
-.btn-navbar-c ::before {
+.btn-navbar-c ::after {
   content: "";
   @apply w-1 h-1 bg-white absolute -bottom-3 left-[40%] rounded-full scale-0 duration-300;
 }
-.btn-navbar:hover ::before {
+.btn-navbar:hover ::after {
   @apply scale-100;
 }
-.btn-navbar-c:hover ::before {
+.btn-navbar-c:hover ::after {
   @apply scale-100;
 }
 .circle {
