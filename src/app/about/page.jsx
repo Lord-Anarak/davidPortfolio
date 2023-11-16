@@ -51,10 +51,10 @@ const AboutPage = () => {
             data-scroll-section>
             <img
               data-scroll
-              data-scroll-speed="-1"
+              data-scroll-speed="-0.5"
               src="assets/davidprof.jpg"
               alt="Profile_pic"
-              className="w-full h-auto -mt-96"
+              className="w-full h-auto -mt-60"
             />
           </div>
         </div>

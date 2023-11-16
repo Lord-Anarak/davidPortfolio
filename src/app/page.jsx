@@ -4,30 +4,27 @@ import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import Recent from "./components/Recent";
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
 
 export default function Home() {
-	useEffect(() => {
-		const lenis = new Lenis();
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
 
-		function raf(time) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
+      setTimeout(() => {
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
 
-		requestAnimationFrame(raf);
-		return () => {
-			lenis.destroy();
-		};
-	}, []);
-
-	return (
-		<main className="">
-			<Hero />
-			<AboutSection />
-			<Recent />
-			<Footer/>
-		</main>
-	);
+  return (
+    <main className="">
+      <Hero />
+      <AboutSection />
+      <Recent />
+      <Footer />
+    </main>
+  );
 }

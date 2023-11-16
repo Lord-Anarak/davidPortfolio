@@ -14,7 +14,7 @@ const WorkPage = () => {
           Creating Product designs that you never seen before
         </h1>
       </div>
-      <div ref={container} className="relative z-20 bg-white">
+      <div ref={container} className="relative z-20 bg-white pb-20">
         <Gallery />
       </div>
       <Overlay />
