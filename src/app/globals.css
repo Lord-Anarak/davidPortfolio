@@ -6,6 +6,18 @@
   font-family: Silka;
   src: url("./fonts/silka-regular-webfont.woff2");
 }
+@font-face {
+  font-family: Akoodi;
+  src: url("./fonts/akoodi.woff2");
+}
+@font-face {
+  font-family: Tekrot;
+  src: url("./fonts/tekrot.woff2");
+}
+@font-face {
+  font-family: Bladus;
+  src: url("./fonts/bladus.woff2");
+}
 
 * {
   padding: 0;
@@ -51,7 +63,7 @@
   }
 }
 .burgerButton {
-  @apply fixed top-0 right-0 m-10 w-16 h-16 rounded-full flex border border-slate-400 items-center justify-center;
+  @apply fixed top-0 right-0 m-10 w-16 h-16 rounded-full flex items-center justify-center;
 }
 .burgerButton .burger {
   @apply w-full;
@@ -250,5 +262,27 @@
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

@@ -32,9 +32,9 @@ export default function Index() {
 
   return (
     <Canvas
-      style={{ background: "#e0e0e2" }}
+      style={{ background: "transparent" }}
       orthographic
-      camera={{ position: [0, 0, 200], zoom: 10 }}>
+      camera={{ position: [0, 0, 200], zoom: 5 }}>
       <Model mouse={smoothMouse} />
       <Environment preset="studio" />
     </Canvas>

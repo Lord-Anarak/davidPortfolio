@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import RoundedButton from "./common/RoundedButton";
 import Magnetic from "./common/Magnetic";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Header = () => {
   const [IsOpen, setIsOpen] = useState(false);
@@ -27,9 +28,15 @@ const Header = () => {
   return (
     <header className="w-full absolute z-50">
       <div className="flex justify-between p-10">
-        <div>
+        <div className="w-36">
           <Link href="/" className={path === "/contact" ? "text-white" : ""}>
-            360MotionStudio
+            <Image
+              src="/logo.png"
+              width={300}
+              height={300}
+              alt="logo"
+              className="scale-150 -mt-10"
+            />
           </Link>
         </div>
         <nav>
@@ -64,8 +71,8 @@ const Header = () => {
         className={`burgerButton z-50`}
         onClick={() => setIsOpen(!IsOpen)}>
         <RoundedButton
-          backgroundColor={"#334BD3"}
-          className={`h-16 w-16 text-white rounded-full absolute flex items-center justify-center cursor-pointer ${
+          backgroundColor={"#2563eb"}
+          className={`h-16 w-16 text-white border border-slate-400 rounded-full absolute flex items-center justify-center cursor-pointer ${
             IsOpen ? "bg-blue-700" : "bg-slate-900"
           }`}>
           <div className={`burger ${IsOpen ? "burgerActive" : ""} z-30`}></div>

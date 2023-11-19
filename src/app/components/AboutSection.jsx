@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
-import { animate, motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import RoundedButton from "./common/RoundedButton";
+import TextAnimation from "./common/TextAnimation";
 
 const reveal = {
   hidden: {
-    x: 100,
+    x: 50,
     opacity: 0,
   },
   visible: {
@@ -15,24 +16,45 @@ const reveal = {
 };
 
 const AboutSection = () => {
+  const scrollContainer = useRef(null);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const scroll = new LocomotiveScroll({
+        el: scrollContainer.current,
+        smooth: true,
+      });
+    })();
+  }, []);
   return (
     <section className="max-w-7xl mx-auto p-10 py-20 mt-20">
       <div className="flex justify-between gap-3">
         <p className="text-3xl">
-          Helping brands to stand out in the digital era. Together we will set
-          the new status quo. No nonsense, always on the cutting edge.
+          <TextAnimation
+            text={
+              "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge."
+            }
+            once
+            animDuration={0.02}
+          />
         </p>
-        <div className="w-90">
+        <div className="w-90" ref={scrollContainer} data-scroll-section>
           <motion.p
             variants={reveal}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 1, type: "tween" }}>
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              type: "tween",
+              ease: [0.76, 0, 0.24, 1],
+            }}>
             The combination of my passion for design, code & interaction
             positions me in a unique place in the web design world.
           </motion.p>
 
-          <div className="mt-20">
+          <div className="mt-16 pb-12" data-scroll data-scroll-speed="-0.07">
             <a href="/about">
               <RoundedButton
                 backgroundColor={"#334BD3"}

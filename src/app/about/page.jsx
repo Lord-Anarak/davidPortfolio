@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import Overlay from "../components/common/Overlay";
 import Footer from "../components/Footer";
+import TextAnimation from "../components/common/TextAnimation";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   const scrollContainer = useRef(null);
@@ -18,20 +20,30 @@ const AboutPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="flex h-[80vh] justify-center items-center mb-10">
-        <h1 className="text-[5vw] px-[20vw] leading-tight">
-          Empowering brands to excel in the digital realm
+      <div className="flex h-[80vh] justify-center items-center mb-8">
+        <h1 className="text-[5vw] px-[20vw] uppercase">
+          <TextAnimation
+            text={"Elevating brands to thrive in the digital domain"}
+            once
+            animDuration={0.05}
+            classes={"font-['Bladus']"}
+          />
         </h1>
         <hr />
       </div>
       <div className="bg-white relative z-10" data-scroll-container>
         <div className="flex justify-between relative max-w-7xl mx-auto">
           <div className="w-1/4 ml-32">
-            <p className="text-justify">
+            <motion.p
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.76, 0, 0.24, 1], duration: 1, delay: 1 }}
+              className="text-justify">
               I assist companies globally by providing custom-tailored
               solutions. With every project, I push the boundaries of my craft,
               prioritizing quality above all else.
-            </p>
+            </motion.p>
             <svg
               className="scale-125 mt-10 float-right"
               width="9"

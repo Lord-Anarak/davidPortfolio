@@ -20,70 +20,42 @@ export default function Model({ mouse }) {
   return (
     <group>
       <Mesh
-        node={nodes.Sphere001}
-        multiplier={2.4}
-        mouse={mouse}
-        isActive={activeShape == 1}
-      />
-      <Mesh
-        node={nodes.Sphere002}
-        multiplier={2.4}
-        mouse={mouse}
-        isActive={activeShape == 2}
-      />
-      <Mesh
-        node={nodes.Cylinder002}
-        multiplier={1.2}
-        mouse={mouse}
-        isActive={activeShape == 3}
-      />
-      <Mesh
         node={nodes.Sphere003}
         multiplier={1}
         mouse={mouse}
-        isActive={activeShape == 4}
+        isActive={activeShape == 1}
       />
-      <Mesh
-        node={nodes.Cylinder003}
-        multiplier={1.8}
-        mouse={mouse}
-        isActive={activeShape == 5}
-      />
+
       <Mesh
         node={nodes.Cylinder005}
         multiplier={1.8}
         mouse={mouse}
-        isActive={activeShape == 6}
+        isActive={activeShape == 2}
       />
       <Mesh
         node={nodes.Cube002}
         multiplier={2}
         mouse={mouse}
-        isActive={activeShape == 7}
+        isActive={activeShape == 3}
       />
-      <Mesh
-        node={nodes.Cylinder006}
-        multiplier={1.2}
-        mouse={mouse}
-        isActive={activeShape == 8}
-      />
+
       <Mesh
         node={nodes.Cylinder007}
         multiplier={1.6}
         mouse={mouse}
-        isActive={activeShape == 9}
+        isActive={activeShape == 4}
       />
       <Mesh
         node={nodes.Cylinder009}
         multiplier={1.8}
         mouse={mouse}
-        isActive={activeShape == 10}
+        isActive={activeShape == 5}
       />
       <Mesh
         node={nodes.Sphere}
         multiplier={1.5}
         mouse={mouse}
-        isActive={activeShape == 11}
+        isActive={activeShape == 6}
       />
     </group>
   );
