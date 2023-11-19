@@ -29,10 +29,11 @@ const TextAnimation = ({ text, once, classes, textDelay, animDuration }) => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         transition={{ staggerChildren: AnimTime, delayChildren: textDelay }}>
-        {text.split(" ").map((word) => (
-          <span className="inline-block">
-            {word.split("").map((char) => (
+        {text.split(" ").map((word, index) => (
+          <span key={index} className="inline-block">
+            {word.split("").map((char, ind) => (
               <motion.span
+                key={ind}
                 variants={charAnimation}
                 className={`inline-block ${classes}`}>
                 {char}
