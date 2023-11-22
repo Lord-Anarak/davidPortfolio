@@ -42,18 +42,20 @@ const Footer = () => {
       ref={container}
       className="flex flex-col justify-center items-center text-white relative bg-gray-950 overflow-hidden">
       <div className="pt-[250px] w-full">
-        <div className="border-b-gray-500 border-b-2 pb-[90px] mx-[200px]">
+        <div className="border-b-gray-500 sm:border-b-2 border-b sm:pb-[90px] pb-16 sm:mx-[200px] mx-5">
           <span className="flex items-center">
-            <h2 className="ml-2 text-[3vw]">Let&apos;s work</h2>
+            <h2 className="sm:ml-2 sm:text-[3vw] text-3xl">Let&apos;s work</h2>
           </span>
-          <h2 className="m-0 -mt-5 text-[8vw] font-semibold">together</h2>
+          <h2 className="m-0 mt-2 sm:text-[8vw] text-5xl font-semibold">
+            together
+          </h2>
           <motion.div
             style={{ x }}
-            className="relative left-[calc(100%-400px)] top-[calc(100%-5px)]">
+            className="relative sm:left-[calc(100%-400px)] sm:top-[calc(100%-5px)] mt-5 sm:mt-0">
             <RoundedButton
               backgroundColor={"#4c00a8"}
-              className="h-[180px] w-[180px] bg-blue-600 text-white rounded-full absolute flex items-center justify-center cursor-pointer">
-              <p className="m-0 z-10 relative">Get in touch</p>
+              className="sm:h-[180px] sm:w-[180px] h-28 w-28 bg-blue-600 text-white rounded-full absolute flex items-center justify-center cursor-pointer">
+              <p className="m-0 z-10 relative text-sm">Get in touch</p>
             </RoundedButton>
           </motion.div>
           <motion.svg
@@ -70,7 +72,7 @@ const Footer = () => {
             />
           </motion.svg>
         </div>
-        <div className="flex gap-5 mx-[200px] mt-16">
+        <div className="flex sm:flex-row flex-col gap-5 sm:mx-[200px] mx-5 mt-16">
           <RoundedButton>
             <p className="relative z-10">360motionstudio@gmail.com</p>
           </RoundedButton>
@@ -78,33 +80,40 @@ const Footer = () => {
             <p className="relative z-10">+971 54 588 9937</p>
           </RoundedButton>
         </div>
-        <div className="flex justify-between p-5 mt-24">
-          <div className="flex gap-10 items-end">
-            <span className="flex flex-col gap-5 ">
+        <div className="flex sm:flex-row flex-col-reverse gap-5 sm:gap-0 justify-between p-5 sm:mt-24 mt-5">
+          <div className="flex gap-10 sm:items-end justify-between">
+            <span className="flex flex-col sm:gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
                 Copyright
               </h3>
               <p className="m-0 p-2 cursor-pointer">2023 © Edition</p>
             </span>
-            <span className="flex flex-col gap-5 ">
-              <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
+            <span className="flex flex-col sm:gap-5 ">
+              <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400 sm:text-start text-end">
                 Local Time
               </h3>
-              <p className="m-0 p-2 cursor-pointer">{time} GMT+4</p>
+              <p className="m-0 p-2 cursor-pointer sm:text-start text-end">
+                {time} GMT+4
+              </p>
             </span>
           </div>
-          <div className="flex gap-10 items-end">
-            <span className="flex flex-col gap-5 ">
+          <div className="flex sm:gap-10 items-end">
+            <span className="flex flex-col sm:gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
                 socials
               </h3>
               <Magnetic>
-                <p className="m-0 p-2 cursor-pointer">Facebook</p>
+                <Link
+                  href="https://www.facebook.com/people/360-Motion-Studio/100092259304482/"
+                  target="_blank"
+                  className="m-0 p-2 cursor-pointer">
+                  Facebook
+                </Link>
               </Magnetic>
             </span>
             <Magnetic>
               <Link
-                href="https://instagram.com/360motionstud?igshid=MTNiYzNiMzkwZA%3D%3D&utm_source=qr"
+                href="https://instagram.com/360motionstud"
                 target="_blank"
                 className="m-0 p-2 cursor-pointer">
                 Instagram
@@ -114,7 +123,12 @@ const Footer = () => {
               <p className="m-0 p-2 cursor-pointer">Youtube</p>
             </Magnetic>
             <Magnetic>
-              <p className="m-0 p-2 cursor-pointer">Linkedin</p>
+              <Link
+                href="https://www.linkedin.com/in/david-kotoka-913782231"
+                target="blank"
+                className="m-0 p-2 cursor-pointer">
+                Linkedin
+              </Link>
             </Magnetic>
           </div>
         </div>

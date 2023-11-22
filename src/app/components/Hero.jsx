@@ -29,17 +29,17 @@ const fadeDown = {
 const Hero = () => {
   return (
     <div className="h-screen w-full bg-gray-200">
-      <div className="p-10 flex justify-between items-center">
+      <div className="sm:p-10 p-5 flex sm:flex-row flex-col justify-between items-center">
         <div className="mt-40 relative z-10">
           <motion.h1
             variants={fadeDown}
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-            className="text-[2vw] ml-1">
+            className="sm:text-[2vw] text-xl ml-1">
             Redefining Reality
           </motion.h1>
-          <h2 className="text-[8vw] uppercase leading-tight">
+          <h2 className="sm:text-[8vw] text-5xl uppercase leading-tight">
             <TextAnimation
               text={"Through"}
               classes={"font-black font-['Bladus']"}
@@ -77,7 +77,7 @@ const Hero = () => {
                 duration: 2,
                 delay: 2,
               }}
-              className="text-xl mt-5 ml-1">
+              className="sm:text-lg text-sm mt-5 ml-1">
               Product Designs | Commercial Videos
             </motion.p>
           </motion.div>
@@ -86,10 +86,10 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1, ease: "easeIn" }}
-          className="absolute w-full h-full top-0 -right-72">
-          <FloatingShape />
+          className="absolute w-full h-full top-0 right-0">
+          {/* <FloatingShape /> */}
         </motion.div>
-        <div className="absolute bottom-5 flex gap-3 items-center ml-2">
+        <div className="absolute bottom-5 flex gap-3 items-center sm:ml-2">
           <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse duration-1000"></div>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             Located in Dubai

@@ -27,20 +27,20 @@ const Header = () => {
 
   return (
     <header className="w-full absolute z-50">
-      <div className="flex justify-between p-10">
-        <div className="w-36">
+      <div className="flex justify-between sm:p-10 p-5">
+        <div className="sm:w-28 w-20">
           <Link href="/" className={path === "/contact" ? "text-white" : ""}>
             <Image
-              src="/logo.png"
+              src={path === "/contact" ? "/logo-white.png" : "/logo-dark.png"}
               width={300}
               height={300}
               alt="logo"
-              className="scale-150 -mt-10"
+              className=""
             />
           </Link>
         </div>
         <nav>
-          <ul className="flex justify-between gap-10">
+          <ul className="sm:flex justify-between gap-10 hidden">
             {navLinks.map((link, index) => {
               const lcText = link.toLowerCase();
               return (
@@ -68,7 +68,7 @@ const Header = () => {
           scale: isScrolled ? 1 : 0,
         }}
         transition={{ duration: 0.3, ease: "easeIn", type: "tween" }}
-        className={`burgerButton z-50`}
+        className={`burgerButton sm:m-10 m-3 z-50`}
         onClick={() => setIsOpen(!IsOpen)}>
         <RoundedButton
           backgroundColor={"#2563eb"}

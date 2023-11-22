@@ -40,7 +40,7 @@ const RoundedButton = ({
   return (
     <Magnetic>
       <div
-        className="rounded-full border border-gray-500 cursor-pointer flex items-center justify-center px-10 py-5"
+        className="rounded-full border border-gray-500 cursor-pointer flex items-center justify-center sm:px-10 px-5 sm:py-5 py-4"
         style={{ overflow: "hidden" }}
         onMouseEnter={() => {
           manageMouseEnter();

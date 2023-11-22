@@ -28,8 +28,8 @@ const AboutSection = () => {
     })();
   }, []);
   return (
-    <section className="max-w-7xl mx-auto p-10 py-20 mt-20">
-      <div className="flex justify-between gap-3">
+    <section className="max-w-7xl mx-auto p-10 py-20 sm:mt-20">
+      <div className="flex sm:flex-row flex-col justify-between gap-3">
         <p className="text-3xl">
           <TextAnimation
             text={
@@ -41,6 +41,7 @@ const AboutSection = () => {
         </p>
         <div className="w-90" ref={scrollContainer} data-scroll-section>
           <motion.p
+            className="sm:mt-0 mt-5"
             variants={reveal}
             initial="hidden"
             whileInView="visible"
