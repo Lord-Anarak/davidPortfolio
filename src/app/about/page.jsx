@@ -20,8 +20,8 @@ const AboutPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="flex h-[80vh] justify-center items-center mb-8">
-        <h1 className="text-[5vw] px-[20vw] uppercase">
+      <div className="flex h-[80vh] justify-center items-center sm:mb-8">
+        <h1 className="sm:text-[5vw] text-5xl sm:px-[20vw] mx-5 uppercase">
           <TextAnimation
             text={"Elevating brands to thrive in the digital domain"}
             once
@@ -32,8 +32,8 @@ const AboutPage = () => {
         <hr />
       </div>
       <div className="bg-white relative z-10" data-scroll-container>
-        <div className="flex justify-between relative max-w-7xl mx-auto">
-          <div className="w-1/4 ml-32">
+        <div className="flex sm:flex-row flex-col justify-between relative max-w-7xl mx-auto">
+          <div className="sm:w-1/4 sm:ml-32 mx-5 sm:mx-0">
             <motion.p
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -45,7 +45,7 @@ const AboutPage = () => {
               prioritizing quality above all else.
             </motion.p>
             <svg
-              className="scale-125 mt-10 float-right"
+              className="scale-125 mt-10 sm:float-right"
               width="9"
               height="9"
               viewBox="0 0 9 9"
@@ -58,7 +58,7 @@ const AboutPage = () => {
             </svg>
           </div>
           <div
-            className="w-2/4 h-[80vh] overflow-hidden"
+            className="sm:w-2/4 h-[80vh] mt-5 sm:mt-0 overflow-hidden"
             ref={scrollContainer}
             data-scroll-section>
             <img

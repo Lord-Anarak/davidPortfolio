@@ -10,8 +10,8 @@ const WorkPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="flex h-[80vh] justify-center items-center mb-10">
-        <h1 className="text-[5vw] px-[20vw] uppercase">
+      <div className="flex h-[80vh] justify-center items-center sm:mb-10">
+        <h1 className="sm:text-[5vw] sm:px-[20vw] text-5xl px-5 uppercase">
           <TextAnimation
             text={"Creating Product designs that you never seen before"}
             once

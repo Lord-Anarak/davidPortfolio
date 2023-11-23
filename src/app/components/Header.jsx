@@ -60,12 +60,23 @@ const Header = () => {
             })}
           </ul>
         </nav>
+        <button
+          className={`${
+            path === "/contact" ? "text-white" : ""
+          } sm:hidden flex items-center`}
+          onClick={() => setIsOpen(!IsOpen)}>
+          <span
+            className={`w-[5px] h-[5px] inline-block rounded-full mr-2 ${
+              path === "/contact" ? "bg-white" : "bg-black"
+            }`}></span>
+          Menu
+        </button>
       </div>
 
       <motion.button
         initial={{ scale: 0 }}
         animate={{
-          scale: isScrolled ? 1 : 0,
+          scale: isScrolled || IsOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3, ease: "easeIn", type: "tween" }}
         className={`burgerButton sm:m-10 m-3 z-50`}

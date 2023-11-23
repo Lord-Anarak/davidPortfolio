@@ -80,7 +80,7 @@ const Footer = () => {
             <p className="relative z-10">+971 54 588 9937</p>
           </RoundedButton>
         </div>
-        <div className="flex sm:flex-row flex-col-reverse gap-5 sm:gap-0 justify-between p-5 sm:mt-24 mt-5">
+        <div className="flex sm:flex-row flex-col-reverse gap-5 sm:gap-0 justify-between p-3 sm:p-5 sm:mt-24 mt-5">
           <div className="flex gap-10 sm:items-end justify-between">
             <span className="flex flex-col sm:gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
