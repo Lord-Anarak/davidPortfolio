@@ -74,10 +74,19 @@ const Footer = () => {
         </div>
         <div className="flex sm:flex-row flex-col gap-5 sm:mx-[200px] mx-5 mt-16">
           <RoundedButton>
-            <p className="relative z-10">360motionstudio@gmail.com</p>
+            <Link
+              href="mailto:360motionstudio@gmail.com"
+              className="relative z-10">
+              360motionstudio@gmail.com
+            </Link>
           </RoundedButton>
           <RoundedButton>
-            <p className="relative z-10">+971 54 588 9937</p>
+            <Link
+              href="https://wa.me/+971545889937"
+              target="_blank"
+              className="relative z-10">
+              +971 54 588 9937
+            </Link>
           </RoundedButton>
         </div>
         <div className="flex sm:flex-row flex-col-reverse gap-5 sm:gap-0 justify-between p-3 sm:p-5 sm:mt-24 mt-5">

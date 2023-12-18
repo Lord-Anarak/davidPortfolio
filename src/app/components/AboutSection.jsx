@@ -33,7 +33,7 @@ const AboutSection = () => {
         <p className="text-3xl">
           <TextAnimation
             text={
-              "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge."
+              "Empowering brands to distinguish themselves in the digital era. Collaboratively, we endeavor to establish a pioneering standard. With a commitment to excellence, we navigate the forefront of innovation."
             }
             once
             animDuration={0.02}
@@ -51,8 +51,8 @@ const AboutSection = () => {
               type: "tween",
               ease: [0.76, 0, 0.24, 1],
             }}>
-            The combination of my passion for design, code & interaction
-            positions me in a unique place in the web design world.
+            Together, let's redefine the possibilities of 3D excellence and set
+            new standards in the art of visual storytelling.
           </motion.p>
 
           <div className="mt-16 pb-12" data-scroll data-scroll-speed="-0.07">

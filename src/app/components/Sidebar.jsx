@@ -42,7 +42,7 @@ const Sidebar = ({ closeSidebar }) => {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen sm:px-[7.5vw] px-10 sm:w-[calc(100vw/2.8)] w-full pt-[15vh] pb-[10vh] z-40 bg-black fixed top-0 right-0">
+      className="h-screen sm:px-[7.5vw] px-10 sm:w-[calc(100vw/2.8)] w-full py-[10vh] z-40 bg-black fixed top-0 right-0 flex flex-col justify-end">
       <h6 className="text-white opacity-50 text-[10px] tracking-widest">
         NAVIGATION
       </h6>
@@ -69,9 +69,28 @@ const Sidebar = ({ closeSidebar }) => {
         })}
       </ul>
       <h6 className="text-white opacity-30 text-[10px] mt-20">SOCIALS</h6>
-      <ul>
-        <li className="text-white mt-5">
-          <Link href="#">Instagram</Link>
+      <ul className="flex gap-5 justify-between">
+        <li className="text-white mt-5 sm:text-base text-xs">
+          <Link
+            href="https://www.facebook.com/people/360-Motion-Studio/100092259304482/"
+            target="_blank">
+            Facebook
+          </Link>
+        </li>
+        <li className="text-white mt-5 sm:text-base text-xs">
+          <Link href="https://instagram.com/360motionstud" target="_blank">
+            Instagram
+          </Link>
+        </li>
+        <li className="text-white mt-5 sm:text-base text-xs">
+          <Link href="#">Youtube</Link>
+        </li>
+        <li className="text-white mt-5 sm:text-base text-xs">
+          <Link
+            href="https://www.linkedin.com/in/david-kotoka-913782231"
+            target="_blank">
+            LinkedIn
+          </Link>
         </li>
       </ul>
       <Curve />
