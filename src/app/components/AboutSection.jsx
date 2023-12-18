@@ -51,8 +51,8 @@ const AboutSection = () => {
               type: "tween",
               ease: [0.76, 0, 0.24, 1],
             }}>
-            Together, let's redefine the possibilities of 3D excellence and set
-            new standards in the art of visual storytelling.
+            Together, let&apos;s redefine the possibilities of 3D excellence and
+            set new standards in the art of visual storytelling.
           </motion.p>
 
           <div className="mt-16 pb-12" data-scroll data-scroll-speed="-0.07">
