@@ -82,10 +82,10 @@ const Footer = () => {
           </RoundedButton>
           <RoundedButton>
             <Link
-              href="https://wa.me/+971545889937"
+              href="https://wa.me/+971545078712"
               target="_blank"
               className="relative z-10">
-              +971 54 588 9937
+              +971 54 507 8712
             </Link>
           </RoundedButton>
         </div>
@@ -95,7 +95,7 @@ const Footer = () => {
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400">
                 Copyright
               </h3>
-              <p className="m-0 p-2 cursor-pointer">2023 © Edition</p>
+              <p className="m-0 p-2 cursor-pointer">2024 © Edition</p>
             </span>
             <span className="flex flex-col sm:gap-5 ">
               <h3 className="m-0 p-2 cursor-pointer text-sm text-slate-400 sm:text-start text-end">
