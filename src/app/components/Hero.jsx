@@ -36,7 +36,8 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-            className="sm:text-[2vw] text-xl ml-1">
+            className="sm:text-[2vw] text-xl ml-1"
+          >
             Redefining Reality
           </motion.h1>
           <h2 className="sm:text-[8vw] text-5xl uppercase leading-tight">
@@ -50,7 +51,8 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               transition={{ delay: 1, ease: [0.76, 0, 0.24, 1], duration: 1 }}
-              className="font-black font-['Bladus'] gradient-text inline-block">
+              className="font-black font-['Bladus'] gradient-text inline-block"
+            >
               3D
             </motion.span>
             <br />
@@ -68,7 +70,8 @@ const Hero = () => {
               ease: [0.76, 0, 0.24, 1],
               duration: 3,
             }}
-            className="overflow-hidden">
+            className="overflow-hidden"
+          >
             <motion.p
               initial={{ x: -500 }}
               animate={{ x: 0 }}
@@ -77,17 +80,20 @@ const Hero = () => {
                 duration: 2,
                 delay: 2,
               }}
-              className="sm:text-lg text-sm mt-5 ml-1">
+              className="sm:text-lg text-sm mt-5 ml-1"
+            >
               Product Designs | Commercial Videos
             </motion.p>
           </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.5 }}
           transition={{ delay: 3, duration: 1, ease: "easeIn" }}
-          className="absolute w-full h-full top-0 right-0">
+          className="absolute w-full h-full overflow-hidden top-0 right-0"
+        >
           {/* <FloatingShape /> */}
+          <video src="/assets/herovid.mp4" muted loop autoPlay></video>
         </motion.div>
         <div className="absolute bottom-5 flex gap-3 items-center sm:ml-2">
           <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse duration-1000"></div>
