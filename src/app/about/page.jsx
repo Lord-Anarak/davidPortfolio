@@ -84,9 +84,9 @@ const AboutPage = () => {
               transition={{ ease: [0.76, 0, 0.24, 1], duration: 1, delay: 1 }}
               className="text-justify"
             >
-              At 360 Motion Studio, we're not just another production company –
-              we're your digital revolutionaries, redefining brand storytelling
-              through mesmerizing 3D product commercials.
+              At 360 Motion Studio, we&apos;re not just another production
+              company – we&apos;re your digital revolutionaries, redefining
+              brand storytelling through mesmerizing 3D product commercials.
             </motion.p>
             <svg
               className="scale-125 mt-5 sm:float-right"
@@ -104,9 +104,9 @@ const AboutPage = () => {
             <div className="mt-16 flex items-center gap-5">
               <p className="text-justify">
                 Imagine your brand soaring above the digital landscape, leaving
-                audiences captivated and craving more. That's our mission at 360
-                Motion Studio. With a blend of innovation and imagination, we
-                bring your products to life like never before.
+                audiences captivated and craving more. That&apos;s our mission
+                at 360 Motion Studio. With a blend of innovation and
+                imagination, we bring your products to life like never before.
               </p>
               <h2 className="text-sm [writing-mode:vertical-lr] font-semibold uppercase justify-center">
                 Vision
@@ -114,10 +114,10 @@ const AboutPage = () => {
             </div>
             <div className="mt-16 flex items-center gap-5">
               <p className="text-justify">
-                Collaboration is key. We dive deep into your brand's DNA,
+                Collaboration is key. We dive deep into your brand&apos;s DNA,
                 crafting tailor-made solutions that resonate with your audience
                 and drive real results. From conceptualization to execution,
-                we're with you every step of the way.
+                we&apos;re with you every step of the way.
               </p>
               <h2 className="text-sm [writing-mode:vertical-lr] font-semibold uppercase justify-center">
                 Approach
