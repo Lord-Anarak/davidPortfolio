@@ -89,11 +89,17 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
-          transition={{ delay: 3, duration: 1, ease: "easeIn" }}
-          className="absolute w-full h-full overflow-hidden top-0 right-0"
+          transition={{ delay: 0, duration: 1, ease: "easeIn" }}
+          className="absolute w-full overflow-hidden top-0 right-0"
         >
           {/* <FloatingShape /> */}
-          <video src="/assets/herovid.mp4" muted loop autoPlay></video>
+          <video
+            src="/assets/herovid.mp4"
+            muted
+            loop
+            autoPlay
+            className="w-screen h-screen object-cover"
+          ></video>
         </motion.div>
         <div className="absolute bottom-5 flex gap-3 items-center sm:ml-2">
           <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse duration-1000"></div>

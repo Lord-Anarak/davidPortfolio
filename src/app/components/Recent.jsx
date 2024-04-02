@@ -36,7 +36,7 @@ const Recent = () => {
   const container = useRef(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width:500px)");
+    const mediaQuery = window.matchMedia("(max-width:1000px)");
     setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
@@ -60,9 +60,11 @@ const Recent = () => {
             ? Works.map(({ title, type, src }, index) => (
                 <li
                   key={index}
-                  className="text-3xl text-black border-b w-full flex sm:flex-row flex-col justify-between items-center py-10 sm:px-5">
+                  className="text-3xl text-black border-b w-full flex sm:flex-row flex-col justify-between items-center py-10 sm:px-5"
+                >
                   <div
-                    className={`w-96 h-72 flex items-center justify-center px-5`}>
+                    className={`w-96 h-72 flex items-center justify-center px-5`}
+                  >
                     <video src={src} className="h-auto" controls />
                   </div>
                   <span className="group-hover:-translate-x-4 group-hover:text-gray-600 duration-200 ease-linear">
@@ -82,7 +84,8 @@ const Recent = () => {
                   }
                   onMouseLeave={() =>
                     setModal((prevState) => ({ active: false, index: index }))
-                  }>
+                  }
+                >
                   <span className="group-hover:-translate-x-4 group-hover:text-gray-600 duration-200 ease-linear">
                     {title}
                   </span>
