@@ -55,7 +55,7 @@ const Footer = () => {
             <RoundedButton
               backgroundColor={"#4c00a8"}
               className="sm:h-[180px] sm:w-[180px] h-28 w-28 bg-blue-600 text-white rounded-full absolute flex items-center justify-center cursor-pointer">
-              <p className="m-0 z-10 relative text-sm">Get in touch</p>
+              <p className="m-0 z-10 relative text-sm">Talk to David</p>
             </RoundedButton>
           </motion.div>
           <motion.svg
@@ -85,7 +85,7 @@ const Footer = () => {
               href="https://wa.me/+971545078712"
               target="_blank"
               className="relative z-10">
-              +971 54 507 8712
+              Send a quick message
             </Link>
           </RoundedButton>
         </div>

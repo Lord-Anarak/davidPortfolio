@@ -30,47 +30,39 @@ const Gallery = () => {
         />
         <img src="assets/image00002.jpeg" className="img-responsive" />
         <img src="assets/image00003.jpeg" className="img-responsive" />
-        <video className="vid" controls>
-          <source src="assets/Ball.mp4" type="video/mp4"></source>
-        </video>
         <img src="assets/image00004.jpeg" className="img-responsive" />
         <img src="assets/image00005.jpeg" className="img-responsive" />
         <img src="assets/image00006.jpeg" className="img-responsive" />
         <img src="assets/image00007.jpeg" className="img-responsive" />
-        <video className="vid" controls>
-          <source src="assets/Coffee First.mp4" type="video/mp4"></source>
-        </video>
         <img src="assets/image00008.jpeg" className="img-responsive" />
         <img src="assets/image00009.jpeg" className="img-responsive" />
         <img src="assets/image00010.jpeg" className="img-responsive" />
-        <img src="assets/BluetoothSpeaker.jpg" className="img-responsive" />
-
-        <img src="assets/Device0090.png" className="img-responsive" />
-        <video className="vid" controls>
-          <source src="assets/Cosmetic Loop.mp4" type="video/mp4"></source>
-        </video>
-        <img src="assets/EnergyNight.jpg" className="img-responsive" />
         <img src="assets/Grinder.jpg" className="img-responsive" />
         <img src="assets/KenwoodModel.png" className="img-responsive" />
         <img src="assets/Model008.jpg" className="img-responsive" />
         <img src="assets/Model009.jpg" className="img-responsive" />
-        <video className="vid" controls>
-          <source src="assets/Device IG_1.mp4" type="video/mp4"></source>
-        </video>
         <img src="assets/Model010.jpg" className="img-responsive" />
         <img src="assets/Model011.jpg" className="img-responsive" />
-        <img src="assets/Nivea1.png" className="img-responsive" />
-        <video className="vid" controls>
-          <source src="assets/Motion 1.mp4" type="video/mp4"></source>
-        </video>
-        <img src="assets/Nivea2.png" className="img-responsive" />
         <img src="assets/PTAdapt.jpg" className="img-responsive" />
         <img src="assets/WatchModel.jpg" className="img-responsive" />
-        <video className="vid" controls>
-          <source
-            src="assets/Flash Energy Booster 3D Reel.mp4"
-            type="video/mp4"></source>
-        </video>
+        <img src="assets/3DMontBlanc.jpeg" className="img-responsive" />
+        <img src="assets/boAtWatch.jpeg" className="img-responsive" />
+        <img src="assets/Carme.jpeg" className="img-responsive" />
+        <img src="assets/Damtilis.jpeg" className="img-responsive" />
+        <img src="assets/Fragrance.jpeg" className="img-responsive" />
+        <img src="assets/GoboLightTest.jpeg" className="img-responsive" />
+        <img src="assets/Inswest.jpeg" className="img-responsive" />
+        <img src="assets/lighting.jpeg" className="img-responsive" />
+        <img src="assets/MASERATI2.jpeg" className="img-responsive" />
+        <img src="assets/MASERATI.jpeg" className="img-responsive" />
+        <img src="assets/OMEGA.jpeg" className="img-responsive" />
+        <img src="assets/perfume.jpeg" className="img-responsive" />
+        <img src="assets/perfume2.jpeg" className="img-responsive" />
+        <img src="assets/Porsche992.jpeg" className="img-responsive" />
+        <img src="assets/Porshe.jpeg" className="img-responsive" />
+        <img src="assets/Tanqueray.jpeg" className="img-responsive" />
+        <img src="assets/WATCH.jpeg" className="img-responsive" />
+        <img src="assets/WatchTime.jpeg" className="img-responsive" />
       </div>
 
       <div id="myModal" className="modal fade" role="dialog">

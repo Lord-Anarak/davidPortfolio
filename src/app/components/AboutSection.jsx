@@ -33,7 +33,7 @@ const AboutSection = () => {
         <p className="text-3xl">
           <TextAnimation
             text={
-              "Empowering brands to distinguish themselves in the digital era. Collaboratively, we endeavor to establish a pioneering standard. With a commitment to excellence, we navigate the forefront of innovation."
+              "Are you launching a new product or want to advertise your products and need visuals to get people as excited about it as you are? I got you."
             }
             once
             animDuration={0.02}
@@ -60,7 +60,7 @@ const AboutSection = () => {
               <RoundedButton
                 backgroundColor={"#334BD3"}
                 className="h-[180px] w-[180px] bg-blue-500 text-white rounded-full relative z-20 flex items-center justify-center cursor-pointer">
-                <p className="m-0 z-10 relative">About</p>
+                <p className="m-0 z-10 relative">Talk to David</p>
               </RoundedButton>
             </a>
           </div>

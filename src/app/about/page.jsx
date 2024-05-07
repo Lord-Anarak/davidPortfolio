@@ -82,8 +82,7 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ ease: [0.76, 0, 0.24, 1], duration: 1, delay: 1 }}
-              className="text-justify"
-            >
+              className="text-justify">
               At 360 Motion Studio, we&apos;re not just another production
               company – we&apos;re your digital revolutionaries, redefining
               brand storytelling through mesmerizing 3D product commercials.
@@ -94,8 +93,7 @@ const AboutPage = () => {
               height="9"
               viewBox="0 0 9 9"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z"
                 fill="black"
@@ -103,10 +101,10 @@ const AboutPage = () => {
             </svg>
             <div className="mt-16 flex items-center gap-5">
               <p className="text-justify">
-                Imagine your brand soaring above the digital landscape, leaving
-                audiences captivated and craving more. That&apos;s our mission
-                at 360 Motion Studio. With a blend of innovation and
-                imagination, we bring your products to life like never before.
+                Let&apos;s dive deep into your brand&apos;s needs, crafting
+                tailor-made solutions that resonate with your audience and drive
+                real results. From conceptualization to execution, highlighting
+                your needs every step of the way.
               </p>
               <h2 className="text-sm [writing-mode:vertical-lr] font-semibold uppercase justify-center">
                 Vision
@@ -127,8 +125,7 @@ const AboutPage = () => {
           <div
             className="sm:w-1/2 h-[80vh] mt-5 sm:mt-0 overflow-hidden"
             ref={scrollContainer}
-            data-scroll-section
-          >
+            data-scroll-section>
             <img
               data-scroll
               data-scroll-speed="-0.3"
@@ -145,8 +142,7 @@ const AboutPage = () => {
               {process.map(({ index, title, desc }) => (
                 <li
                   key={index}
-                  className="border border-black p-10 group relative"
-                >
+                  className="border border-black p-10 group relative">
                   <h2 className="flex items-center gap-10 text-lg group-hover:text-white transition-colors duration-500">
                     <span className="font-['Bladus'] text-7xl">0{index}</span>{" "}
                     {title}
